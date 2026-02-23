@@ -1,6 +1,10 @@
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import { DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
 
+console.log("[DynamoDB] APP_AWS_ACCESS_KEY_ID:", process.env.APP_AWS_ACCESS_KEY_ID ? "SET" : "NOT SET");
+console.log("[DynamoDB] APP_AWS_SECRET_ACCESS_KEY:", process.env.APP_AWS_SECRET_ACCESS_KEY ? "SET" : "NOT SET");
+console.log("[DynamoDB] APP_AWS_REGION:", process.env.APP_AWS_REGION ?? "NOT SET");
+
 const client = new DynamoDBClient({
   region: process.env.APP_AWS_REGION ?? "us-east-1",
   ...(process.env.APP_AWS_ACCESS_KEY_ID && process.env.APP_AWS_SECRET_ACCESS_KEY
