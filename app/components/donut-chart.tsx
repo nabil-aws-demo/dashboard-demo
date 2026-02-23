@@ -44,7 +44,7 @@ export default function DonutChart({ data }: DonutChartProps) {
           ))}
         </Pie>
         <Tooltip
-          formatter={(value: number, name: string) => [value, name]}
+          formatter={(value, name) => [value, name]}
           contentStyle={{ borderRadius: "8px", border: "1px solid #e5e7eb", fontSize: "12px" }}
         />
         <Legend
