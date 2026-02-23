@@ -7,6 +7,8 @@ import StatusCard from "@/components/status-card";
 import PropertyCard from "@/components/property-card";
 import DonutChart from "@/components/donut-chart";
 
+export const dynamic = 'force-dynamic';
+
 const STATUS_ORDER: RoomStatus[] = ["Ready", "In Progress", "Needs Attention", "Occupied"];
 
 const STATUS_HEX: Record<RoomStatus, string> = {

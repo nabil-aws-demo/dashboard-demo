@@ -4,6 +4,8 @@ import { getAllRoomsNeedingAttention } from "@/actions/room";
 import { getChecklistItems } from "@/actions/checklist";
 import { RoomStatus } from "@/lib/types";
 
+export const dynamic = 'force-dynamic';
+
 const STATUS_COLORS: Record<RoomStatus, string> = {
   Ready: "bg-green-100 text-green-700",
   "In Progress": "bg-orange-100 text-orange-700",

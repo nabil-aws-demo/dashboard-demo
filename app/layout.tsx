@@ -15,6 +15,8 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: "One&Only Facilities Dashboard",
   description: "Housekeeping and room readiness management",
