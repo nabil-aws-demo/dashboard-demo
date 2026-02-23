@@ -1,6 +1,5 @@
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import { DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
-import { fromEnv } from "@aws-sdk/credential-providers";
 
 // Log all env vars starting with APP_ for debugging
 const appEnvVars = Object.keys(process.env).filter(k => k.startsWith("APP_"));
