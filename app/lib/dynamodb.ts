@@ -1,13 +1,9 @@
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import { DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
 
-// Log all env vars starting with APP_ for debugging
-const appEnvVars = Object.keys(process.env).filter(k => k.startsWith("APP_"));
-console.log("[DynamoDB] APP_ env vars found:", appEnvVars);
-
-const isLambda = !!process.env.LAMBDA_TASK_ROOT;
-console.log("[DynamoDB] Running in Lambda:", isLambda);
-console.log("[DynamoDB] APP_AWS_ACCESS_KEY_ID:", process.env.APP_AWS_ACCESS_KEY_ID ? "SET" : "NOT SET");
+// Log ALL env var keys (not values) to diagnose what's available
+const allKeys = Object.keys(process.env).sort();
+console.log("[DynamoDB] All env var keys:", JSON.stringify(allKeys));
 
 const client = new DynamoDBClient({
   region: process.env.APP_AWS_REGION ?? process.env.AWS_REGION ?? "us-east-1",
