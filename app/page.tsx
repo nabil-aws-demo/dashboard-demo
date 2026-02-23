@@ -1,7 +1,7 @@
 import { getHotels } from "@/actions/hotel";
 import { getRoomsByHotel } from "@/actions/room";
 import { getChecklistItems } from "@/actions/checklist";
-import { deriveRoomStatus, getStatusColor } from "@/lib/status";
+import { deriveRoomStatus } from "@/lib/status";
 import { RoomStatus, Room } from "@/lib/types";
 import StatusCard from "@/components/status-card";
 import PropertyCard from "@/components/property-card";
